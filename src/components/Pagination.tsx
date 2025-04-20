@@ -53,16 +53,18 @@ const Pagination = ({ page, totalPages, onPageChange }: PaginationProps) => {
       <button
         onClick={() => handlePageChange(page - 1)}
         disabled={page === 1}
-        className={`flex items-center justify-center px-4 py-3 w-[64px] h-[44px] rounded-sm ${page === 1
+        className={`flex items-center justify-center px-4 py-3 w-[64px] h-[44px] rounded-sm ${
+          page === 1
             ? "bg-[var(--mauve-dark-alpha-3)] text-[var(--mauve-dark-alpha-3)] dark:bg-[var(--mauve-alpha-3)] dark:text-[var(--mauve-alpha-3)] cursor-not-allowed"
             : "bg-[var(--purple-dark-9)] text-[var(--mauve-dark-1)] dark:bg-[var(--purple-9)] dark:text-[var(--mauve-1)]"
-          } transition duration-300`}
+        } transition duration-300`}
       >
         <ChevronLeft
-          className={`w-[24px] h-[24px] ${page === 1
+          className={`w-[24px] h-[24px] ${
+            page === 1
               ? "text-[var(--mauve-dark-1)] dark:text-[var(--mauve-1)]"
               : "text-[var(--mauve-dark-1)] dark:text-[var(--mauve-1)]"
-            }`}
+          }`}
         />
       </button>
 
@@ -81,10 +83,11 @@ const Pagination = ({ page, totalPages, onPageChange }: PaginationProps) => {
         <button
           key={pg}
           onClick={() => handlePageChange(pg)}
-          className={`flex items-center justify-center px-4 py-3 w-[49px] h-[44px] rounded-sm ${pg === page
+          className={`flex items-center justify-center px-4 py-3 w-[49px] h-[44px] rounded-sm ${
+            pg === page
               ? "bg-[var(--purple-dark-alpha-1)] text-[var(--mauve-dark-1)] dark:bg-[var(--purple-alpha-1)] dark:text-[var(--mauve-1)]"
               : "bg-[var(--purple-dark-9)] text-[var(--mauve-dark-1)] dark:bg-[var(--purple-9)] dark:text-[var(--mauve-1)]"
-            } transition duration-300`}
+          } transition duration-300`}
         >
           <span className="font-roboto text-base">{pg}</span>
         </button>
@@ -104,16 +107,18 @@ const Pagination = ({ page, totalPages, onPageChange }: PaginationProps) => {
       <button
         onClick={() => handlePageChange(page + 1)}
         disabled={page === totalPages}
-        className={`flex items-center justify-center px-4 py-3 w-[64px] h-[44px] rounded-sm ${page === totalPages
+        className={`flex items-center justify-center px-4 py-3 w-[64px] h-[44px] rounded-sm ${
+          page === totalPages
             ? "bg-[var(--purple-dark-alpha-1)] text-[var(--mauve-dark-1)] dark:bg-[var(--purple-alpha-1)] dark:text-[var(--mauve-1)] cursor-not-allowed"
             : "bg-[var(--purple-dark-9)] text-[var(--mauve-dark-1)] dark:bg-[var(--purple-9)] dark:text-[var(--mauve-1)]"
-          } transition duration-300`}
+        } transition duration-300`}
       >
         <ChevronRight
-          className={`w-[24px] h-[24px] ${page === totalPages
+          className={`w-[24px] h-[24px] ${
+            page === totalPages
               ? "text-[var(--mauve-dark-1)] dark:text-[var(--mauve-1)]"
               : "text-[var(--mauve-dark-1)] dark:text-[var(--mauve-1)]"
-            }`}
+          }`}
         />
       </button>
     </div>

@@ -20,13 +20,13 @@ const eslintConfig = [
     languageOptions: {
       parserOptions: {
         ecmaVersion: "latest",
-        sourceType: "module"
-      }
+        sourceType: "module",
+      },
     },
     rules: {
-      "prettier/prettier": "error"
-    }
-  }
+      "prettier/prettier": "error",
+    },
+  },
 ];
 
 export default eslintConfig;

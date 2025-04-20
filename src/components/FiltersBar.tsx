@@ -65,10 +65,11 @@ const FiltersBar = ({
         {filteredGenres.map((genre) => (
           <label
             key={genre.id}
-            className={`flex items-center px-3 py-2 rounded-md text-sm cursor-pointer bg-[var(--mauve-dark-alpha-3)] dark:bg-[var(--mauve-alpha-3)] text-[var(--mauve-dark-1)] dark:text-[var(--mauve-1)] hover:brightness-110 ${selectedGenres.includes(genre.id)
+            className={`flex items-center px-3 py-2 rounded-md text-sm cursor-pointer bg-[var(--mauve-dark-alpha-3)] dark:bg-[var(--mauve-alpha-3)] text-[var(--mauve-dark-1)] dark:text-[var(--mauve-1)] hover:brightness-110 ${
+              selectedGenres.includes(genre.id)
                 ? "bg-[var(--purple-dark-9)] text-[var(--mauve-dark-1)] dark:bg-[var(--purple-9)] dark:text-[var(--mauve-1)]"
                 : ""
-              }`}
+            }`}
           >
             <input
               type="checkbox"

@@ -38,8 +38,9 @@ const RatingCircle = ({ rating, size = "default" }: RatingCircleProps) => {
         />
       </svg>
       <span
-        className={`absolute font-montserrat font-semibold ${size === "default" ? "text-[24px]" : "text-[20px]"
-          } text-yellow-400`}
+        className={`absolute font-montserrat font-semibold ${
+          size === "default" ? "text-[24px]" : "text-[20px]"
+        } text-yellow-400`}
       >
         {rating.toLocaleString("en-US", {
           minimumFractionDigits: 0,
