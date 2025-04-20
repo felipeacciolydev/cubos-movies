@@ -6,8 +6,12 @@ export const BASE_LANG = "pt-BR";
 
 export const apiClient = axios.create({
   baseURL: BASE_URL,
+  headers: {
+    "Content-Type": "application/json;charset=utf-8",
+    accept: "application/json",
+    Authorization: `Bearer ${API_KEY}`,
+  },
   params: {
-    api_key: API_KEY,
     language: BASE_LANG,
   },
 });
