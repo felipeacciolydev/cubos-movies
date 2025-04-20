@@ -2,7 +2,7 @@ import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 import { Genre } from "@/types/types";
 
-const API_KEY = "8e2a71a75b0fdb40741e18bbcede9310";
+const API_KEY = process.env.TMDB_API_KEY;
 const BASE_URL = "https://api.themoviedb.org/3";
 const BASE_LANG = "pt-BR";
 
