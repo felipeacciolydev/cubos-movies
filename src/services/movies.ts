@@ -1,8 +1,25 @@
 import { apiClient } from "./apiConfig";
 import { SearchResponse, MovieDetails } from "@/types/types";
 
-export const fetchTrendingMovies = async (): Promise<SearchResponse> => {
-  const response = await apiClient.get("/trending/movie/week");
+export const fetchTrendingMovies = async (
+  page: number = 1,
+  region?: string,
+  primaryReleaseDateGte?: string,
+  primaryReleaseDateLte?: string,
+  voteAverageGte?: number
+): Promise<SearchResponse> => {
+  const response = await apiClient.get("/discover/movie", {
+    params: {
+      include_adult: false,
+      include_video: false,
+      page,
+      region,
+      sort_by: "popularity.desc",
+      primary_release_date_gte: primaryReleaseDateGte,
+      primary_release_date_lte: primaryReleaseDateLte,
+      vote_average_gte: voteAverageGte,
+    },
+  });
 
   return {
     results: response.data.results,
